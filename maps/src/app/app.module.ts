@@ -5,6 +5,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OffsetSelectionCompModule } from './offset-selection-comp/offset-selection-comp.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OffsetSelectionCompModule } from './offset-selection-comp/offset-select
     BrowserModule,
     AppRoutingModule,
     LeafletModule.forRoot(),
-    OffsetSelectionCompModule
+    OffsetSelectionCompModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
