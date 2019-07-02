@@ -169,16 +169,11 @@ export class GeneralInfoComponent implements OnInit {
 
     this.sunBurstChartOptions = {
       title: {
-          text: 'WORLD COFFEE RESEARCH SENSORY LEXICON',
-          subtext: 'Source: https://worldcoffeeresearch.org/work/sensory-lexicon/',
+          text: 'Sun Burst Chart',
           textStyle: {
               fontSize: 14,
               align: 'center'
           },
-          subtextStyle: {
-              align: 'center'
-          },
-          sublink: 'https://worldcoffeeresearch.org/work/sensory-lexicon/'
       },
       series: {
           type: 'sunburst',
