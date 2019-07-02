@@ -171,7 +171,7 @@ export class GeneralInfoComponent implements OnInit {
       title: {
           text: 'Sun Burst Chart',
           textStyle: {
-              fontSize: 14,
+              fontSize: 18,
               align: 'center'
           },
       },
@@ -199,8 +199,6 @@ export class GeneralInfoComponent implements OnInit {
           }]
       }
     };
-
-    
   }
 
   onChartEvent(event: any, type: string) {
