@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { OffsetSelectionCompComponent } from './offset-selection-comp/offset-selection-comp.component'
+
+const routes: Routes = [
+  {
+    path: '', component: OffsetSelectionCompComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

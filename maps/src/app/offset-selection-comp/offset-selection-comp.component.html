@@ -1,1 +1,30 @@
-<p>offset-selection-comp works!</p>
+<div class="main-content">
+  <section class="title">
+    <h2>Welcome to Alan's analysis page</h2>
+  </section>
+  <section class="map-charts">
+    <div class="map-section">
+      <form [formGroup]="searchForm" (ngSubmit)="searchHouses()">
+        <div class="form-group">
+          <label for="distance">Distance: </label>
+          <input type="number" formControlName="distance" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; searchForm.controls.distance.errors}">
+          <div *ngIf="submitted &amp;&amp; searchForm.controls.distance.errors" class="text-danger">
+            <div *ngIf="searchForm.controls.distance.errors.required">Distance is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="age">Age: </label>
+          <input type="number" formControlName="age" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; searchForm.controls.age.errors}">
+          <div *ngIf="submitted &amp;&amp; searchForm.controls.age.errors" class="text-danger">
+            <div *ngIf="searchForm.controls.age.errors.required">Age is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Find</button>
+        </div>
+      </form>
+      <app-map-box></app-map-box>
+    </div>
+    
+  </section>
+</div>
