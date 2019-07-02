@@ -23,13 +23,26 @@
     }
 
     .charts-tables-section {
-      width: calc(100% - 750px);
+      width: calc(100% - 740px);
+      border: 1px solid lightgray;
+      padding: 25px;
+      box-shadow: 0 0 15px 5px lightgrey;
     }
   }
 
   .map-charts {
     display: flex;
     justify-content: space-between;   
+  }
+
+  .soil-formation {
+    height: 1200px;
+    border: 1px solid lightgray;
+    padding: 25px;
+    margin: 30px 50px; 
+    box-shadow: 0 0 15px 5px lightgrey;
+    color: lightgray;
+    font-size: 3rem;
   }
 }
 
