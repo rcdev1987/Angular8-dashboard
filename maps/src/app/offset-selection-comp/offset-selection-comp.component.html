@@ -1,6 +1,6 @@
 <div class="main-content">
   <section class="title">
-    <h2>Welcome to Alan's analysis page</h2>
+    <h3>Welcome to Alan's analysis page</h3>
   </section>
   <section class="map-charts">
     <div class="map-section">
@@ -19,12 +19,12 @@
             <div *ngIf="searchForm.controls.age.errors.required">Age is required</div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group btn-submit">
           <button class="btn btn-primary" type="submit">Find</button>
         </div>
       </form>
       <app-map-box></app-map-box>
     </div>
-    
+
   </section>
 </div>

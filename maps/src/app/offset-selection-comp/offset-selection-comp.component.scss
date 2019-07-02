@@ -1,0 +1,26 @@
+.main-content {
+  section {
+    padding: 15px 50px;
+
+    .map-section {
+      width: 700px;
+      border: 1px solid lightgray;
+      padding: 5px;
+      box-shadow: 0 0 15px 5px lightgrey;
+
+      form {
+        display: flex;
+        padding-left: 10px;
+
+        .form-group {
+          margin-right: 20px;
+        }
+
+        .btn-submit {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
