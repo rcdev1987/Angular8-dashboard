@@ -1,1 +1,50 @@
-<p>tables works!</p>
+<div class="general-table">
+  <h5>General Table</h5>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th *ngFor="let column of columns">
+          {{column}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let house of generalHouseData">
+        <td>{{house.house_name}}</td>
+        <td>{{house.distance}}</td>
+        <td>{{house.age}}</td>
+        <td>{{house.totalTime}}</td>
+        <td>{{house.timePerFt}}</td>
+        <td>{{house.costPerFt}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="ranking-table">
+  <h5>Ranking Table</h5>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" appSortable="house_name" (sort)="onSort($event)">Name</th>
+        <th scope="col" appSortable="distance" (sort)="onSort($event)">Distance</th>
+        <th scope="col" appSortable="age" (sort)="onSort($event)">Age</th>
+        <th scope="col" appSortable="totalTime" (sort)="onSort($event)">Time</th>
+        <th scope="col" appSortable="timePerFt" (sort)="onSort($event)">Days for 10k</th>
+        <th scope="col" appSortable="costPerFt" (sort)="onSort($event)">Cost</th>
+        <th scope="col" appSortable="totalRank" (sort)="onSort($event)">Total Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let house of rankingHouseData">
+        <td>{{house.house_name}}</td>
+        <td>{{house.distance}}</td>
+        <td>{{house.age}}</td>
+        <td>{{house.totalTime}}</td>
+        <td>{{house.timePerFt}}</td>
+        <td>{{house.costPerFt}}</td>
+        <td>{{house.totalRank}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

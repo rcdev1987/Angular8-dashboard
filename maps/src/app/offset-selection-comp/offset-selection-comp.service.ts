@@ -99,7 +99,98 @@ export class OffsetSelectionCompService {
   }
 
   getGeneralTableData(): Observable<any> {
-    const data = {};
+    const data = [
+      {
+        id: 0,
+        house_id: 0,
+        house_name: '1',
+        geo_latitude: 123321,
+        geo_longitude: 321123,
+        distance: 123,
+        totalTime: 32,
+        timePerFt: 12,
+        nptTime: '2019-07-02T07:14:43Z',
+        nptFraction: 0.1,
+        totalCost: 20,
+        mdDepth: 2,
+        age: 33,
+        costPerFt: 345
+      }, {
+        id: 1,
+        house_id: 1,
+        house_name: '2',
+        geo_latitude: 123321,
+        geo_longitude: 321123,
+        distance: 23,
+        totalTime: 43,
+        timePerFt: 55,
+        nptTime: '2019-07-01T07:14:43Z',
+        nptFraction: 0.3,
+        totalCost: 14,
+        mdDepth: 1,
+        age: 35,
+        costPerFt: 233
+      }, {
+        id: 2,
+        house_id: 2,
+        house_name: '3',
+        geo_latitude: 432234,
+        geo_longitude: 543345,
+        distance: 55,
+        totalTime: 12,
+        timePerFt: 21,
+        nptTime: '2019-06-02T07:14:43Z',
+        nptFraction: 0.8,
+        totalCost: 2,
+        mdDepth: 2,
+        age: 25,
+        costPerFt: 235
+      }, {
+        id: 3,
+        house_id: 3,
+        house_name: '4',
+        geo_latitude: 554324,
+        geo_longitude: 543633,
+        distance: 543,
+        totalTime: 55,
+        timePerFt: 5,
+        nptTime: '2019-07-02T07:14:43Z',
+        nptFraction: 0.3,
+        totalCost: 20,
+        mdDepth: 2,
+        age: 39,
+        costPerFt: 345
+      }, {
+        house_id: 4,
+        house_name: '5',
+        geo_latitude: 543345,
+        geo_longitude: 543786,
+        distance: 98,
+        totalTime: 8,
+        timePerFt: 7,
+        nptTime: '2019-06-07T07:14:43Z',
+        nptFraction: 0.5,
+        totalCost: 24,
+        mdDepth: 3,
+        age: 35,
+        costPerFt: 45
+      }, {
+        id: 5,
+        house_id: 5,
+        house_name: '6',
+        geo_latitude: 654456,
+        geo_longitude: 654456,
+        distance: 6,
+        totalTime: 44,
+        timePerFt: 55,
+        nptTime: '2019-05-02T07:14:43Z',
+        nptFraction: 0.4,
+        totalCost: 60,
+        mdDepth: 2,
+        age: 19,
+        costPerFt: 55
+      }
+    ];
     return of(data);
   }
 }

@@ -2,8 +2,8 @@ export default interface OffsetSelectionComp {
 }
 
 export interface House {
-  House_id: number;
-  House_name: string;
+  house_id: number;
+  house_name: string;
   geo_latitude: number;
   geo_longitude: number;
   distance: number;
