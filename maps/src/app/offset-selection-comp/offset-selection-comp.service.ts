@@ -54,6 +54,50 @@ export class OffsetSelectionCompService {
     return of(data);
   }
 
+  getSunBurstChartData(): Observable<any> {
+    const data = [
+      {
+        id: 0,
+        name: 'productive',
+        value: 100,
+        children: [
+          {
+            name: 'in',
+            value: 12
+          },
+          {
+            name: 'out',
+            value: 18
+          },
+          {
+            name: 'moving',
+            value: 70
+          }
+        ]
+      },
+      {
+        id: 0,
+        name: 'nonproductive',
+        value: 20,
+        children: [
+          {
+            name: 'failure1',
+            value: 12
+          },
+          {
+            name: 'failure2',
+            value: 2
+          },
+          {
+            name: 'failure3',
+            value: 6
+          }
+        ]
+      }
+    ];
+    return of(data);
+  }
+
   getGeneralTableData(): Observable<any> {
     const data = {};
     return of(data);

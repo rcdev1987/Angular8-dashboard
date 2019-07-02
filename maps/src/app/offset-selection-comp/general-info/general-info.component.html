@@ -1,6 +1,6 @@
 <div class="charts-section">
   <div class="bar-chart">
-      <div echarts [options]="options" class="demo-chart"
+      <div echarts [options]="barChartOptions" class="demo-chart"
           (chartInit)="onChartEvent($event, 'chartInit')"
           (chartClick)="onChartEvent($event, 'chartClick')"
           (chartDblClick)="onChartEvent($event, 'chartDblClick')"
@@ -14,6 +14,6 @@
         ></div>
   </div>
   <div class="sunburst-chart">
-
+    <div echarts [options]="sunBurstChartOptions" class="demo-chart"></div>
   </div>
 </div>

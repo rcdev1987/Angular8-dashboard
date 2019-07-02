@@ -10,8 +10,10 @@ import { OffsetSelectionCompService } from '../offset-selection-comp.service';
 })
 export class GeneralInfoComponent implements OnInit {
 
-  options: any;
+  barChartOptions: any;
   detectEventChanges = true;
+  sunBurstChartOptions: any;
+  sunBurstChartData: any;
 
   constructor(private offsetSelectionService: OffsetSelectionCompService) { }
 
@@ -35,7 +37,7 @@ export class GeneralInfoComponent implements OnInit {
       }
     );
 
-    this.options = {
+    this.barChartOptions = {
       title: {
         text: 'Problem Frequency'
       },
@@ -112,6 +114,98 @@ export class GeneralInfoComponent implements OnInit {
         }
       ]
     };
+
+    this.sunBurstChartData = [{
+      name: 'Productive',
+      value: 100,
+      itemStyle: {
+          color: '#da0d68'
+      },
+      children: [{
+          name: 'In',
+          value: 12,
+          itemStyle: {
+              color: '#975e6d'
+          }
+      }, {
+          name: 'Out',
+          value: 18,
+          itemStyle: {
+              color: '#e0719c'
+          }
+      }, {
+          name: 'Moving',
+          value: 70,
+          itemStyle: {
+              color: '#bb764c'
+          }
+      }]
+  }, {
+    name: 'Non-Productive',
+    value: 20,
+    itemStyle: {
+        color: '#5e9a80'
+    },
+    children: [{
+        name: 'Failure 1',
+        value: 12,
+        itemStyle: {
+            color: '#b9a449'
+        }
+    }, {
+        name: 'Failure 2',
+        value: 2,
+        itemStyle: {
+            color: '#7a9bae'
+        }
+    }, {
+        name: 'Failure 3',
+        value: 6,
+        itemStyle: {
+            color: '#039fb8'
+        }
+    }]
+},];
+
+    this.sunBurstChartOptions = {
+      title: {
+          text: 'WORLD COFFEE RESEARCH SENSORY LEXICON',
+          subtext: 'Source: https://worldcoffeeresearch.org/work/sensory-lexicon/',
+          textStyle: {
+              fontSize: 14,
+              align: 'center'
+          },
+          subtextStyle: {
+              align: 'center'
+          },
+          sublink: 'https://worldcoffeeresearch.org/work/sensory-lexicon/'
+      },
+      series: {
+          type: 'sunburst',
+          highlightPolicy: 'ancestor',
+          data: this.sunBurstChartData,
+          radius: [0, '95%'],
+          sort: null,
+          levels: [{}, {
+              r0: '15%',
+              r: '35%',
+              itemStyle: {
+                  borderWidth: 2
+              },
+              label: {
+                  rotate: 'tangential'
+              }
+          }, {
+              r0: '35%',
+              r: '70%',
+              label: {
+                  align: 'center'
+              }
+          }]
+      }
+    };
+
+    
   }
 
   onChartEvent(event: any, type: string) {
