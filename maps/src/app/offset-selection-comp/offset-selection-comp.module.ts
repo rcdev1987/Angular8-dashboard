@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { OffsetSelectionCompComponent } from './offset-selection-comp.component';
 import { MapBoxComponent } from './map-box/map-box.component';
@@ -14,7 +15,8 @@ import { TablesComponent } from './tables/tables.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    LeafletModule
+    LeafletModule,
+    NgbModule
   ],
   exports: [OffsetSelectionCompComponent]
 })

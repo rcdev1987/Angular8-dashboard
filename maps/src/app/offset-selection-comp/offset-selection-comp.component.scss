@@ -21,6 +21,15 @@
         }
       }
     }
+
+    .charts-tables-section {
+      width: calc(100% - 750px);
+    }
+  }
+
+  .map-charts {
+    display: flex;
+    justify-content: space-between;   
   }
 }
 
