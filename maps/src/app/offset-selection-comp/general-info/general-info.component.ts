@@ -165,7 +165,7 @@ export class GeneralInfoComponent implements OnInit {
             color: '#039fb8'
         }
     }]
-},];
+}];
 
     this.sunBurstChartOptions = {
       title: {
@@ -179,7 +179,7 @@ export class GeneralInfoComponent implements OnInit {
           type: 'sunburst',
           highlightPolicy: 'ancestor',
           data: this.sunBurstChartData,
-          radius: [0, '95%'],
+          radius: ['20%', '95%'],
           sort: null,
           levels: [{}, {
               r0: '15%',
