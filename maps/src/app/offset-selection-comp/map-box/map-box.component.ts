@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ComponentFactoryResolver, ComponentRef, Injector, DoCheck } from '@angular/core';
 import { tileLayer, latLng, circle, polygon, marker, Marker, LatLngExpression } from 'leaflet';
 
-import { House } from '../offset-selection-comp.model';
+import House from '../offset-selection-comp.model';
 import { HTMLMarkerComponent } from './html-marker.component';
 
 interface MarkerMetaData {
