@@ -63,7 +63,6 @@ export class TablesComponent implements OnInit {
   }
 
   onSort({ column, direction }: SortEvent) {
-    console.log('123123');
     // resetting other headers
     this.headers.forEach(header => {
       if (header.appSortable !== column) {
@@ -71,7 +70,7 @@ export class TablesComponent implements OnInit {
       }
     });
 
-    // sorting countries
+    // sorting table data
     if (direction === '') {
       this.rankingHouseData = this._rankingHouseData;
     } else {
