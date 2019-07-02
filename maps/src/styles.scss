@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+.header{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  color: lightgray;
+  padding: 10px 0;
+}
+
+.footer {
+  text-align: center;
+  border-top: 1px solid lightgray;
+  color: lightgray;
+  padding: 10px 0;
+}
+
+table .cell-center-sm {
+  text-align: center;
+  width: 100px;
+}
+
+th[appSortable] {
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+th[appSortable].asc::after,
+th[appSortable].desc::after {
+  height: 22px;
+  float: right;
+  content: '\2191';
+}
+
+th[appSortable].desc::after {
+  content: '\2193';
+}
