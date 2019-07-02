@@ -11,9 +11,10 @@ import { OffsetSelectionCompComponent } from './offset-selection-comp.component'
 import { MapBoxComponent } from './map-box/map-box.component';
 import { GeneralInfoComponent } from './general-info/general-info.component';
 import { TablesComponent } from './tables/tables.component';
+import { HTMLMarkerComponent } from './map-box/html-marker.component';
 
 @NgModule({
-  declarations: [OffsetSelectionCompComponent, MapBoxComponent, GeneralInfoComponent, TablesComponent],
+  declarations: [OffsetSelectionCompComponent, MapBoxComponent, GeneralInfoComponent, TablesComponent, HTMLMarkerComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -23,6 +24,8 @@ import { TablesComponent } from './tables/tables.component';
     NgxEchartsModule,
     SharedModule
   ],
-  exports: [OffsetSelectionCompComponent]
+  exports: [OffsetSelectionCompComponent],
+  // IMPORTANT! Dynamic components need to be registered here
+  entryComponents: [HTMLMarkerComponent]
 })
 export class OffsetSelectionCompModule { }

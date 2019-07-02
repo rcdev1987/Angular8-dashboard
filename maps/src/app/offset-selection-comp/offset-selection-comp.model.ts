@@ -1,4 +1,4 @@
-export default interface OffsetSelectionComp {
+export interface OffsetSelectionComp {
 }
 
 export interface House {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { OffsetSelectionCompService } from './offset-selection-comp.service';
 
 @Component({
   selector: 'app-offset-selection-comp',
@@ -9,9 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class OffsetSelectionCompComponent implements OnInit {
   searchForm: FormGroup;
   submitted: boolean = false;
+  mapData = [];
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private offsetSelectionService: OffsetSelectionCompService
   ) { }
 
   ngOnInit() {
@@ -27,7 +30,16 @@ export class OffsetSelectionCompComponent implements OnInit {
     if (this.searchForm.invalid) {
       return;
     }
-    console.log('form: ', this.searchForm.value);
+    const distance = this.searchForm.value.distance;
+    const age = this.searchForm.value.age;
+    this.offsetSelectionService.getMapboxData(distance, age).subscribe(
+      res => {
+        this.mapData = res;
+      },
+      err => {
+        console.log('map error: ', err);
+      }
+    );
   }
 
 }
