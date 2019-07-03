@@ -55,6 +55,9 @@ export class TablesComponent implements OnInit {
           ...house
         }));
         this._rankingHouseData = this.rankingHouseData;
+        this.rankingHouseData = [...this.rankingHouseData].sort((a, b) => {
+          return res = compare( Number(b['totalRank']), Number(a['totalRank']));
+        });
       },
       err => {
         console.log('error: ', err);
