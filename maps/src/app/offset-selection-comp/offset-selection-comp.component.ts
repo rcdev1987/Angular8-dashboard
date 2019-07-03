@@ -19,12 +19,12 @@ export class OffsetSelectionCompComponent implements OnInit {
 
   ngOnInit() {
     this.searchForm = this.formBuilder.group({
-      distance: [undefined, Validators.required],
-      age: [undefined, Validators.required]
+      distance: [10, Validators.required],
+      age: [10, Validators.required]
     });
   }
 
-  searchHouses() {
+  public searchHouses() {
     this.submitted = true;
 
     if (this.searchForm.invalid) {
