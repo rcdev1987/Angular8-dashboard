@@ -51,7 +51,7 @@ export class TablesComponent implements OnInit {
             + house.distance * this.rankingWeight.distance
             + house.age * this.rankingWeight.age
             + house.totalTime * this.rankingWeight.time
-            + house.timePerFt * this.rankingWeight.days).toFixed(1),
+            + house.timePerFt * this.rankingWeight.days).toFixed(2),
           ...house
         }));
         this._rankingHouseData = this.rankingHouseData;
