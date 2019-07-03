@@ -23,6 +23,8 @@ export class MapBoxComponent implements OnInit {
   layersControl: any;
 
   @Input()
+  public searchHouses: any;
+  @Input()
   set mapData(data: House[]) {
     if (data.length) {
       this.markers.forEach((marker: MarkerMetaData) => {
@@ -93,6 +95,9 @@ export class MapBoxComponent implements OnInit {
   onMapReady(map) {
     // get a local reference to the map as we need it later
     this.map = map;
+    setTimeout(() => {
+      this.searchHouses();
+    });
   }
 
 }
